@@ -350,3 +350,55 @@ body.menu-open .menu-btn{background:var(--ink);color:var(--cream);border-color:v
 .js [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .55s var(--ease),transform .55s var(--ease)}
 .js [data-reveal].in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.js [data-reveal]{opacity:1;transform:none}}
+
+/* Complete-set offer */
+.setbox{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(20px,3vw,40px);background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,3vw,32px);margin:8px 0 28px;box-shadow:var(--shadow-1)}
+@media (max-width:800px){.setbox{grid-template-columns:1fr}}
+.setbox h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.tiers{list-style:none;margin:12px 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.tiers li{border:1px solid var(--line-2);border-radius:999px;padding:8px 14px;font-size:.9rem}
+.tiers li.is-hit{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.set-total{font-size:1.05rem}
+.set-total b{font:600 1.4rem var(--serif)}
+.set-builder{border:1px solid var(--line-2);border-radius:14px;padding:0 16px;background:var(--paper);align-self:start}
+.set-builder summary{cursor:pointer;padding:14px 0;font-weight:600;min-height:48px;display:flex;align-items:center;justify-content:space-between;list-style:none}
+.set-builder summary::-webkit-details-marker{display:none}
+.set-builder summary::after{content:"+";font:400 1.4rem var(--serif);color:var(--cherry)}
+.set-builder[open] summary::after{content:"–"}
+.set-list{list-style:none;margin:0;padding:0;max-height:360px;overflow:auto;border-top:1px solid var(--line)}
+.set-list li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.set-list label{display:flex;align-items:center;gap:10px;cursor:pointer;min-height:36px}
+.set-list input{width:18px;height:18px;accent-color:var(--cherry)}
+.set-list a{white-space:nowrap;font-size:.84rem;font-weight:600;text-decoration:none;color:var(--cherry)}
+.set-list a:hover{text-decoration:underline}
+.set-list li.is-done span{text-decoration:line-through;color:var(--muted)}
+
+/* Card deck (swipeable, looping) */
+.deck-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:14px 0 18px}
+.deck-bar output{font:500 .95rem var(--serif);min-width:80px;text-align:center}
+.deck-hint{flex-basis:100%;order:9}
+@media (min-width:700px){.deck-hint{flex-basis:auto;order:0}}
+.view-toggle{margin-left:auto;display:inline-flex;border:1px solid var(--line-2);border-radius:999px;padding:3px}
+.vt{border:0;background:transparent;font:600 .84rem var(--sans);padding:8px 14px;min-height:36px;border-radius:999px;cursor:pointer;color:var(--ink)}
+.vt[aria-pressed="true"]{background:var(--ink);color:var(--cream)}
+.deck-mode .tiles{display:block;position:relative;height:min(74vh,620px);max-width:440px;margin:0 auto;touch-action:pan-y}
+.deck-mode .tile{position:absolute;inset:0;margin:0;display:none;transition:transform .45s var(--ease),opacity .45s var(--ease);will-change:transform}
+.deck-mode .tile.is-top,.deck-mode .tile.is-next,.deck-mode .tile.is-next2,.deck-mode .tile.is-out{display:block}
+.deck-mode .tile.is-top{z-index:3}
+.deck-mode .tile.is-next{z-index:2;transform:translateY(16px) scale(.955);opacity:.9;pointer-events:none}
+.deck-mode .tile.is-next2{z-index:1;transform:translateY(32px) scale(.91);opacity:.7;pointer-events:none}
+.deck-mode .tile.is-out{z-index:4;pointer-events:none;opacity:0}
+.deck-mode .tile.is-out.to-left{transform:translateX(-130%) rotate(-14deg)}
+.deck-mode .tile.is-out.to-right{transform:translateX(130%) rotate(14deg)}
+.deck-mode .tile.is-dragging{transition:none}
+.deck-mode .tile-link{display:flex;flex-direction:column;height:100%;background:var(--cream);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-2);padding:14px;user-select:none;-webkit-user-select:none}
+.deck-mode .tile-art{flex:1;min-height:0;aspect-ratio:auto;border:0;box-shadow:none;background:transparent;padding:4%}
+.deck-mode .tile-art picture,.deck-mode .tile-art img{height:100%}
+.deck-mode .tile-art .fold,.deck-mode .fold-cover{height:100%}
+.deck-mode .tile-link:hover .tile-art{transform:none;box-shadow:none}
+.deck-mode .tile-link:hover .fold-cover{transform:none}
+.deck-mode .tile-title{font-size:1.25rem;margin:12px 0 4px}
+.deck-mode .tile-meta{font-size:.92rem}
+.deck-mode .tile-art img{-webkit-user-drag:none}
+.deck-mode .empty{max-width:440px;margin:16px auto}
+@media (prefers-reduced-motion:reduce){.deck-mode .tile{transition:none}}

@@ -131,6 +131,7 @@
         featured: (a, b) => a.dataset.order - b.dataset.order
       }[sort] || ((a, b) => a.dataset.order - b.dataset.order);
       tiles.slice().sort(by).forEach(t => grid.appendChild(t));
+      grid.dispatchEvent(new CustomEvent('tiles:changed'));
       count.textContent = `${shown} design${shown === 1 ? '' : 's'}`;
       empty.hidden = shown > 0;
       const active = !!(type || col || price || (sort && sort !== 'featured'));
@@ -149,6 +150,101 @@
     form.addEventListener('reset', () => setTimeout(() => apply(true), 0));
     emptyReset && emptyReset.addEventListener('click', () => { form.reset(); });
     apply(false);
+  }
+
+
+  /* ---------------- card deck: one design at a time, swipe or arrow keys, loops ---------------- */
+  const deckBar = $('#deckBar'), deckGrid = $('#tiles');
+  if (deckBar && deckGrid) {
+    const listing = deckGrid.closest('.listing');
+    const count = $('#deckCount'), prevBtn = $('#deckPrev'), nextBtn = $('#deckNext');
+    let order = [], i = 0, busy = false;
+    const visible = () => $$('#tiles > .tile').filter(t => !t.hidden);
+    const CLS = ['is-top', 'is-next', 'is-next2', 'is-out', 'to-left', 'to-right', 'is-dragging'];
+    function paint() {
+      order.forEach(t => { t.classList.remove(...CLS); t.style.transform = ''; });
+      const n = order.length;
+      if (!n) { count.textContent = '0 of 0'; return; }
+      order[i % n].classList.add('is-top');
+      if (n > 1) order[(i + 1) % n].classList.add('is-next');
+      if (n > 2) order[(i + 2) % n].classList.add('is-next2');
+      count.textContent = `${(i % n) + 1} of ${n}`;
+      const img = order[(i + 3) % n] && order[(i + 3) % n].querySelector('img');
+      if (img && img.loading === 'lazy') img.loading = 'eager';
+    }
+    function refresh() { order = visible(); i = 0; paint(); }
+    function go(dir) {
+      const n = order.length; if (n < 2 || busy) return;
+      const top = order[i % n];
+      if (reduce) { i = (i + dir + n) % n; paint(); return; }
+      busy = true;
+      top.classList.add('is-out', dir > 0 ? 'to-left' : 'to-right');
+      setTimeout(() => { i = (i + dir + n) % n; paint(); busy = false; }, 380);
+    }
+    nextBtn.addEventListener('click', () => go(1));
+    prevBtn.addEventListener('click', () => go(-1));
+    document.addEventListener('keydown', e => {
+      if (!listing.classList.contains('deck-mode') || e.target.closest('input,select,textarea,dialog')) return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+    });
+    // swipe on the top card
+    let drag = null;
+    deckGrid.addEventListener('pointerdown', e => {
+      if (!listing.classList.contains('deck-mode') || busy) return;
+      const top = e.target.closest('.tile.is-top'); if (!top) return;
+      drag = { top, x0: e.clientX, y0: e.clientY, dx: 0, moved: false, id: e.pointerId };
+      top.classList.add('is-dragging'); top.setPointerCapture(e.pointerId);
+    });
+    deckGrid.addEventListener('pointermove', e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      drag.dx = e.clientX - drag.x0; const dy = e.clientY - drag.y0;
+      if (Math.abs(drag.dx) > 6 && Math.abs(drag.dx) > Math.abs(dy)) drag.moved = true;
+      if (drag.moved) drag.top.style.transform = `translateX(${drag.dx}px) rotate(${drag.dx / 22}deg)`;
+    });
+    const endDrag = e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const { top, dx, moved } = drag; drag = null;
+      top.classList.remove('is-dragging');
+      if (moved && Math.abs(dx) > Math.min(110, top.clientWidth * 0.28)) { top.style.transform = ''; go(dx < 0 ? 1 : -1); }
+      else top.style.transform = '';
+      if (moved) { top._suppress = true; setTimeout(() => { top._suppress = false; }, 300); }
+    };
+    deckGrid.addEventListener('pointerup', endDrag);
+    deckGrid.addEventListener('pointercancel', endDrag);
+    deckGrid.addEventListener('click', e => { const t = e.target.closest('.tile'); if (t && t._suppress) e.preventDefault(); }, true);
+    deckGrid.addEventListener('dragstart', e => e.preventDefault());
+    deckGrid.addEventListener('tiles:changed', () => { if (listing.classList.contains('deck-mode')) refresh(); });
+    // view toggle, remembered per device
+    function setView(v, save) {
+      const deckOn = v !== 'grid';
+      listing.classList.toggle('deck-mode', deckOn);
+      $$('.vt', deckBar).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === (deckOn ? 'deck' : 'grid'))));
+      if (deckOn) refresh(); else order.forEach(t => { t.classList.remove(...CLS); t.style.transform = ''; });
+      if (save) { try { localStorage.setItem('shopView', deckOn ? 'deck' : 'grid'); } catch (e) {} }
+    }
+    $$('.vt', deckBar).forEach(b => b.addEventListener('click', () => setView(b.dataset.view, true)));
+    let saved = 'deck'; try { saved = localStorage.getItem('shopView') || 'deck'; } catch (e) {}
+    deckBar.hidden = false;
+    setView(saved, false);
+  }
+
+  /* ---------------- set builder: per-device checklist ---------------- */
+  const builder = $('#setBuilder');
+  if (builder) {
+    const key = builder.dataset.key, boxes = $$('input[type=checkbox]', builder), prog = $('#setProgress');
+    let done = []; try { done = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) {}
+    const sync = () => {
+      boxes.forEach(b => { b.checked = done.includes(b.value); b.closest('li').classList.toggle('is-done', b.checked); });
+      prog.textContent = `${done.length} of ${boxes.length} added`;
+    };
+    builder.addEventListener('change', e => {
+      const b = e.target; if (b.type !== 'checkbox') return;
+      done = b.checked ? [...new Set([...done, b.value])] : done.filter(v => v !== b.value);
+      try { localStorage.setItem(key, JSON.stringify(done)); } catch (e2) {}
+      sync();
+    });
+    sync();
   }
 
   /* ---------------- product page ---------------- */
