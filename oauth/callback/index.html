@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Finishing sign-in · FameMaker</title>
+<style>
+  :root{--paper:#f4eee3;--card:#fffdf9;--ink:#1b1612;--muted:#6b6159;--teal:#1f6f5c;--line:#e2d8c8}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#171310;--card:#211b17;--ink:#f4eee3;--muted:#b8ab9c;--teal:#6cc3a8;--line:#3a312a}}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--paper);color:var(--ink);
+       font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;padding:16px;box-sizing:border-box}
+  main{max-width:32rem;width:100%;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px}
+  h1{font-size:1.35rem;margin:0 0 .5rem}
+  p{margin:.5rem 0;color:var(--muted)}
+  a.btn{display:inline-block;margin-top:.75rem;padding:.6rem 1rem;border-radius:999px;background:var(--teal);color:#fff;text-decoration:none;font-weight:600}
+  textarea{width:100%;box-sizing:border-box;margin-top:.5rem;font:13px/1.4 ui-monospace,monospace;padding:.6rem;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main>
+  <h1 id="title">Finishing sign-in…</h1>
+  <p id="msg">Handing you back to the FameMaker app on this computer.</p>
+  <a class="btn" id="go" href="#" hidden>Continue to FameMaker</a>
+  <div id="manual" hidden>
+    <p>If nothing happens, make sure FameMaker is open. Or copy this address and paste it into Marketing → Social → “Paste the address from your browser”.</p>
+    <label for="addr" style="font-weight:600;color:var(--ink)">Address to paste</label>
+    <textarea id="addr" rows="4" readonly></textarea>
+  </div>
+</main>
+<script>
+(function () {
+  // Forwards ?code&state from the social network to the FameMaker backend on this machine. Nothing is stored or
+  // sent anywhere else; the code is useless without the app secret that only FameMaker holds.
+  var q = location.search || "";
+  if (!/[?&](code|error)=/.test(q)) {
+    document.getElementById("title").textContent = "Nothing to finish here";
+    document.getElementById("msg").textContent = "This page completes a social account connection started in the FameMaker app.";
+    return;
+  }
+  var target = "http://127.0.0.1:8765/api/v1/social/oauth/callback" + q;
+  var go = document.getElementById("go");
+  go.href = target; go.hidden = false;
+  document.getElementById("addr").value = location.href;
+  setTimeout(function () { document.getElementById("manual").hidden = false; }, 2500);
+  location.replace(target);
+})();
+</script>
+</body>
+</html>
