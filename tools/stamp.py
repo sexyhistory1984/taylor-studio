@@ -40,6 +40,12 @@ def main() -> int:
         new = re.sub(r"(/assets/studio\.(?:css|js))\?v=[A-Za-z0-9._-]+", rf"\1?v={v}", txt)
         if new != txt:
             p.write_text(new, encoding="utf-8"); changed.append(str(rel))
+    pv = hashlib.sha1((ROOT / "assets/portfolio.css").read_bytes()).hexdigest()[:10]
+    home = ROOT / "index.html"
+    txt = home.read_text(encoding="utf-8")
+    new = re.sub(r"(/assets/portfolio\.css)\?v=[A-Za-z0-9._-]+", rf"\1?v={pv}", txt)
+    if new != txt:
+        home.write_text(new, encoding="utf-8"); changed.append("index.html (portfolio.css)")
     more = " …" if len(changed) > 8 else ""
     print(f"version {v}; updated {len(changed)} file(s)" + (": " + ", ".join(changed[:8]) + more if changed else ""))
     return 0

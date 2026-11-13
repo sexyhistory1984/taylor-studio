@@ -2,7 +2,7 @@
    so every deploy that changes the site gets a new cache and old ones are deleted on activate. */
 const VERSION = '751e23852a';
 const CACHE = 'tc-studio-' + VERSION;
-const SHELL = ['/', '/index.html', '/assets/studio.css?v=' + VERSION, '/assets/studio.js?v=' + VERSION, '/manifest.webmanifest', '/assets/taylor.jpg', '/assets/favicon.svg', '/404.html'];
+const SHELL = ['/', '/index.html', '/manifest.webmanifest', '/assets/taylor.jpg', '/assets/favicon.svg', '/404.html'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {
@@ -10,6 +10,8 @@ self.addEventListener('fetch', e => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (url.origin !== location.origin) return;
+  // Video streams use byte-range requests; let the browser handle them directly.
+  if (url.pathname.startsWith('/media/') || req.headers.has('range')) return;
   const accept = req.headers.get('accept') || '';
   if (req.mode === 'navigate' || accept.includes('text/html')) {
     // Pages: network first, cached copy when offline, 404 page as a last resort.
