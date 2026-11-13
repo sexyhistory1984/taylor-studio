@@ -20,8 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="/media/showreel.jpg">
-<link rel="stylesheet" href="/assets/portfolio.css?v=d1a24cfd9e">
+<link rel="stylesheet" href="/assets/portfolio.css?v=9ec1baea19">
 <script>document.documentElement.classList.remove('no-js')</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Taylor Caldwell","url":"https://taylor.famemaker.app/","image":"https://taylor.famemaker.app/assets/taylor.jpg","email":"mailto:tarthwell@gmail.com","jobTitle":"Producer, web builder and business owner-operator","address":{"@type":"PostalAddress","addressLocality":"Gatlinburg","addressRegion":"TN","addressCountry":"US"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"George W. Truett Theological Seminary, Baylor University"},{"@type":"CollegeOrUniversity","name":"Carson-Newman University"},{"@type":"CollegeOrUniversity","name":"East Tennessee State University"}],"sameAs":["https://sonrisavilla.com/","https://www.youtube.com/@SonrisaVilla","https://mortalarthur.famemaker.app/"]}</script>
 </head>
@@ -46,18 +45,25 @@
 
 <main id="main">
 <section class="hero" aria-label="Introduction">
-  <img class="poster" src="/media/showreel.jpg" alt="" width="1280" height="720" fetchpriority="high">
-  <video id="reel" muted loop playsinline preload="metadata" poster="/media/showreel.jpg" aria-hidden="true"><source src="/media/showreel.mp4" type="video/mp4"></video>
-  <p class="hero-note">Showreel: scenes from Sonrisa Villa and Dino Explorers</p>
-  <button class="reel-toggle" id="reelToggle" aria-pressed="false"><svg viewBox="0 0 12 12" fill="currentColor"><rect x="2" y="1" width="3" height="10" rx="1"/><rect x="7" y="1" width="3" height="10" rx="1"/></svg><span>Pause reel</span></button>
-  <div class="wrap">
-    <p class="eyebrow">Producer · Builder · Operator</p>
-    <h1>Taylor <em>Caldwell</em></h1>
-    <p class="lede">I produce animated series, build the websites and automated marketing behind them, and run a wedding company. Fifteen years of leading people and operations come with it.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="#work">Watch the work<svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5v11l9-5.5z"/></svg></a>
-      <a class="btn btn-quiet" href="#experience">See the résumé</a>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Producer · Builder · Operator</p>
+      <h1>Taylor <em>Caldwell</em></h1>
+      <p class="lede">I produce animated series, build the websites and automated marketing behind them, and run a wedding company. Fifteen years of leading people and operations come with it.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#work">Watch the work<svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5v11l9-5.5z"/></svg></a>
+        <a class="btn btn-quiet" href="#experience">See the résumé</a>
+      </div>
     </div>
+    <figure class="hero-reel">
+      <div class="reel-frame">
+        <video id="reel" muted loop playsinline preload="metadata" poster="/media/showreel.jpg" aria-label="Silent showreel of scenes from Sonrisa Villa and Dino Explorers"><source src="/media/showreel.mp4" type="video/mp4"></video>
+        <button class="reel-toggle" id="reelToggle" aria-pressed="false"><svg viewBox="0 0 12 12" fill="currentColor"><rect x="2" y="1" width="3" height="10" rx="1"/><rect x="7" y="1" width="3" height="10" rx="1"/></svg><span>Pause reel</span></button>
+      </div>
+      <figcaption><span class="dot"></span>Showreel · Sonrisa Villa and Dino Explorers</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
     <div class="hero-meta">
       <span><b>Gatlinburg</b>, Tennessee</span>
       <span><b>M.Div.</b>, Baylor University</span>
@@ -356,11 +362,11 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Header turns solid once past the hero.
-  const mast = $('#mast'), hero = $('.hero');
+  const mast = $('#mast'), hero = $('.hero'), frame = $('.reel-frame');
   const onScroll = () => {
     const h = hero.offsetHeight;
     mast.classList.toggle('solid', scrollY > h - 80);
-    if (!reduce) hero.style.setProperty('--p', Math.min(1, scrollY / h).toFixed(3));
+    if (!reduce) frame.style.setProperty('--p', Math.min(1, scrollY / h).toFixed(3));
   };
   addEventListener('scroll', onScroll, {passive: true}); onScroll();
 
