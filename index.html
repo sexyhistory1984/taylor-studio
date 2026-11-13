@@ -1,409 +1,341 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Taylor Caldwell · Résumé and Portfolio</title>
-<meta name="description" content="Taylor Caldwell: animated bilingual video, automated marketing, websites and online stores, scripting, and fifteen years of operations and people leadership. M.Div., Baylor University.">
-<meta name="theme-color" content="#f4eee3">
+<title>Taylor Caldwell · Producer, Builder, Operator</title>
+<meta name="description" content="Taylor Caldwell: animated bilingual video, automated marketing, websites and stores, Google Sheets scripting, and fifteen years of operations and people leadership. M.Div., Baylor University. Gatlinburg, Tennessee.">
+<meta name="theme-color" content="#14100d">
 <link rel="canonical" href="https://taylor.famemaker.app/">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Taylor Caldwell">
-<meta property="og:title" content="Taylor Caldwell · Résumé and Portfolio">
-<meta property="og:description" content="Animated bilingual video, automated marketing, websites, stores and scripts, plus fifteen years of operations and people leadership.">
+<meta property="og:title" content="Taylor Caldwell · Producer, Builder, Operator">
+<meta property="og:description" content="Animated bilingual series, automated marketing, websites, stores and scripts, backed by fifteen years of operations and people leadership.">
 <meta property="og:url" content="https://taylor.famemaker.app/">
-<meta property="og:image" content="https://taylor.famemaker.app/media/ep002-one-avocado.jpg">
+<meta property="og:image" content="https://taylor.famemaker.app/media/showreel.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-192.png">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/portfolio.css?v=5241c1576c">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Taylor Caldwell","url":"https://taylor.famemaker.app/","image":"https://taylor.famemaker.app/assets/taylor.jpg","jobTitle":"Owner-operator, producer and web builder","address":{"@type":"PostalAddress","addressLocality":"Gatlinburg","addressRegion":"TN","addressCountry":"US"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Baylor University, George W. Truett Theological Seminary"},{"@type":"CollegeOrUniversity","name":"Carson-Newman University"},{"@type":"CollegeOrUniversity","name":"East Tennessee State University"}],"sameAs":["https://sonrisavilla.com/","https://mortalarthur.famemaker.app/","https://www.youtube.com/@SonrisaVilla"]}</script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/media/showreel.jpg">
+<link rel="stylesheet" href="/assets/portfolio.css?v=d1a24cfd9e">
+<script>document.documentElement.classList.remove('no-js')</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Taylor Caldwell","url":"https://taylor.famemaker.app/","image":"https://taylor.famemaker.app/assets/taylor.jpg","email":"mailto:tarthwell@gmail.com","jobTitle":"Producer, web builder and business owner-operator","address":{"@type":"PostalAddress","addressLocality":"Gatlinburg","addressRegion":"TN","addressCountry":"US"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"George W. Truett Theological Seminary, Baylor University"},{"@type":"CollegeOrUniversity","name":"Carson-Newman University"},{"@type":"CollegeOrUniversity","name":"East Tennessee State University"}],"sameAs":["https://sonrisavilla.com/","https://www.youtube.com/@SonrisaVilla","https://mortalarthur.famemaker.app/"]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="mast">
+
+<header class="mast" id="mast">
   <div class="wrap">
     <a class="mark" href="/">Taylor Caldwell<span>.</span></a>
-    <nav id="nav" aria-label="Sections">
-      <a href="#qualifications">Qualifications</a>
-      <a href="#video">Video</a>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#work">Video</a>
       <a href="#marketing">Marketing</a>
       <a href="#outreach">Outreach</a>
       <a href="#web">Web</a>
       <a href="#scripts">Scripts</a>
       <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
+      <a class="btn btn-primary" href="#contact">Get in touch</a>
     </nav>
+    <button class="menu-btn" id="menuBtn" aria-controls="nav" aria-expanded="false"><span class="sr">Menu</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </header>
 
 <main id="main">
-<section class="intro" aria-label="Introduction">
+<section class="hero" aria-label="Introduction">
+  <img class="poster" src="/media/showreel.jpg" alt="" width="1280" height="720" fetchpriority="high">
+  <video id="reel" muted loop playsinline preload="metadata" poster="/media/showreel.jpg" aria-hidden="true"><source src="/media/showreel.mp4" type="video/mp4"></video>
+  <p class="hero-note">Showreel: scenes from Sonrisa Villa and Dino Explorers</p>
+  <button class="reel-toggle" id="reelToggle" aria-pressed="false"><svg viewBox="0 0 12 12" fill="currentColor"><rect x="2" y="1" width="3" height="10" rx="1"/><rect x="7" y="1" width="3" height="10" rx="1"/></svg><span>Pause reel</span></button>
   <div class="wrap">
-    <div>
-      <p class="kicker">Résumé and portfolio · Gatlinburg, Tennessee</p>
-      <h1>Taylor Caldwell</h1>
-      <p class="lede">I co-own and run a wedding company, produce an animated bilingual children's series, and build the websites, stores and automated marketing behind them. Before that, seven years running church operations.</p>
-      <ul class="facts">
-        <li>Owner-operator since 2022</li>
-        <li>M.Div., Baylor University</li>
-        <li>English and Spanish productions</li>
-        <li><a href="mailto:tarthwell@gmail.com">tarthwell@gmail.com</a></li>
-      </ul>
+    <p class="eyebrow">Producer · Builder · Operator</p>
+    <h1>Taylor <em>Caldwell</em></h1>
+    <p class="lede">I produce animated series, build the websites and automated marketing behind them, and run a wedding company. Fifteen years of leading people and operations come with it.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#work">Watch the work<svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5v11l9-5.5z"/></svg></a>
+      <a class="btn btn-quiet" href="#experience">See the résumé</a>
     </div>
-    <figure class="portrait">
-      <img src="/assets/taylor.jpg" alt="Portrait of Taylor Caldwell" width="520" height="650">
-      <figcaption>Taylor</figcaption>
-    </figure>
+    <div class="hero-meta">
+      <span><b>Gatlinburg</b>, Tennessee</span>
+      <span><b>M.Div.</b>, Baylor University</span>
+      <span>Works in <b>English and Spanish</b> productions</span>
+    </div>
   </div>
+</section>
+
+<section class="profile" aria-label="Profile">
+  <div class="wrap">
+    <figure class="portrait rv">
+      <img src="/assets/taylor.jpg" alt="Taylor Caldwell" width="250" height="250">
+      <figcaption>Taylor Caldwell</figcaption>
+    </figure>
+    <p class="statement rv">I take an idea from the first sketch to something people can <em>watch, buy or book</em>: the story, the site, the store and the marketing that keeps it moving.</p>
+    <dl class="facts rv">
+      <div><dt>Now</dt><dd>Owner-operator, Appalachian Wedding Company</dd></div>
+      <div><dt>Creating</dt><dd>Sonrisa Villa · Dino Explorers</dd></div>
+      <div><dt>Before</dt><dd>Minister of Education, 2015–2022</dd></div>
+      <div><dt>Education</dt><dd>M.Div., Baylor · B.A., Carson-Newman</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="numbers" aria-label="Figures, checked 13 November 2026">
+  <ul class="wrap">
+    <li class="rv"><b>687</b><span>products live in an online store</span></li>
+    <li class="rv"><b>35</b><span>social reels finished for one series</span></li>
+    <li class="rv"><b>11</b><span>videos in this portfolio, across two series</span></li>
+    <li class="rv"><b>4</b><span>public websites built and running</span></li>
+    <li class="rv"><b>4.9</b><span>of 5 from couples on WeddingWire</span></li>
+    <li class="rv"><b>15+</b><span>years leading people and operations</span></li>
+  </ul>
 </section>
 
 <section class="sec" id="qualifications" aria-labelledby="q-h">
   <div class="wrap">
-    <header class="sec-head">
-      <p class="num">01 · Qualifications</p>
-      <div><h2 id="q-h">At a glance</h2></div>
-    </header>
-    <ul class="quals">
-      <li><b>Business ownership</b><span>Co-owner and operator of Appalachian Wedding Company since 2022, rated 4.9 of 5 by couples on <a href="https://www.weddingwire.com/biz/appalachian-wedding-company/3ad5813a0ced86c1.html">WeddingWire</a>.</span></li>
-      <li><b>Operations leadership</b><span>Seven years as Minister of Education: administration, attendance and membership data, ordering and events for up to several hundred people.</span></li>
-      <li><b>Video production</b><span>Two original series: three finished bilingual episodes, a mini episode, 22 segments and 16 character reels, plus a dinosaur action series.</span></li>
-      <li><b>Automated marketing</b><span>A 687-product online store, a connected Pinterest catalog and scheduled social reels, all produced and kept current by automated pipelines.</span></li>
-      <li><b>Web building</b><span>Four public websites, including this one, a bilingual series site and a custom-domain store, plus private desktop and web tools.</span></li>
-      <li><b>Writing and speaking</b><span>Graduate training in close reading, clear writing and public speaking; scripts written in English and Spanish.</span></li>
-    </ul>
+    <div class="head">
+      <div><p class="chapter">01 · Qualifications</p><h2 id="q-h">What I bring</h2></div>
+      <p>Six strengths, each backed by work you can see further down this page.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card rv"><p class="k">Business <i>01</i></p><h3>Ownership and operations</h3><p>Co-owner and operator of Appalachian Wedding Company since 2022: sales, contracts, vendors, finances and the day itself.</p></article>
+      <article class="card rv"><p class="k">Leadership <i>02</i></p><h3>Seven years running a ministry office</h3><p>Administration, membership data, ordering and events for groups from a dozen people to several hundred.</p></article>
+      <article class="card rv"><p class="k">Video <i>03</i></p><h3>Two original series</h3><p>Three finished bilingual episodes, a mini episode, 22 segments, 16 character reels and a dinosaur action series.</p></article>
+      <article class="card rv"><p class="k">Marketing <i>04</i></p><h3>Marketing that runs itself</h3><p>A 687-product store, a connected Pinterest catalog and scheduled social reels, kept current automatically.</p></article>
+      <article class="card rv"><p class="k">Web <i>05</i></p><h3>Sites, stores and tools</h3><p>Four public websites, including a bilingual series site and a custom-domain store, plus private business apps.</p></article>
+      <article class="card rv"><p class="k">Writing <i>06</i></p><h3>Writing and speaking</h3><p>Graduate training in close reading, clear writing and public speaking. Scripts written in English and Spanish.</p></article>
+    </div>
   </div>
 </section>
-<section class="sec" id="video" aria-labelledby="video-h">
+
+<section class="sec screen" id="work" aria-labelledby="v-h">
   <div class="wrap">
-    <header class="sec-head">
-      <p class="num">02 · Video</p>
-      <div>
-        <h2 id="video-h">Animated series, reels and bilingual shorts</h2>
-        <p>Original characters, scripts, voices and edits for two series: <i>Sonrisa Villa</i>, a bilingual English and Spanish learning series for young children, and <i>Dino Explorers</i>, a dinosaur action adventure. Each release ships in widescreen and phone formats.</p>
-      </div>
-    </header>
-    <div class="body">
-      <h3 class="reel-title">Full episodes</h3>
-      <p class="reel-sub">Complete story episodes with English and Spanish dialogue and on-screen captions in both languages.</p>
-      <div class="vgrid three">
-        <figure class="clip">
-          <video controls preload="none" playsinline poster="/media/ep001-wheres-the-ball.jpg"><source src="/media/ep001-wheres-the-ball.mp4" type="video/mp4"></video>
-          <figcaption><b>Episode 1 · Where's the Ball?</b>10 minutes. Ball and <i>pelota</i>, where and <i>dónde</i>, together and <i>juntos</i>.</figcaption>
-        </figure>
-        <figure class="clip">
-          <video controls preload="none" playsinline poster="/media/ep002-one-avocado.jpg"><source src="/media/ep002-one-avocado.mp4" type="video/mp4"></video>
-          <figcaption><b>Episode 2 · One Avocado</b>7 minutes 45 seconds. A picnic mystery that teaches the letter A and the number one.</figcaption>
-        </figure>
-        <figure class="clip">
-          <video controls preload="none" playsinline poster="/media/ep003-two-wheels.jpg"><source src="/media/ep003-two-wheels.mp4" type="video/mp4"></video>
-          <figcaption><b>Episode 3 · Two Wheels</b>6 minutes 45 seconds. Mateo learns to ride his new bicycle. Teaches the letter B and the number two.</figcaption>
-        </figure>
-      </div>
-
-      <h3 class="reel-title">One lesson, two languages</h3>
-      <p class="reel-sub">The same song produced twice from one animation, with English and Spanish vocals, so each audience hears it in its first language.</p>
-      <div class="vgrid two">
-        <figure class="clip">
-          <video controls preload="none" playsinline poster="/media/vowels-garden-en.jpg"><source src="/media/vowels-garden-en.mp4" type="video/mp4"></video>
-          <figcaption><b>Vowels in the Garden · English</b>45 seconds.</figcaption>
-        </figure>
-        <figure class="clip">
-          <video controls preload="none" playsinline poster="/media/vowels-garden-es.jpg"><source src="/media/vowels-garden-es.mp4" type="video/mp4"></video>
-          <figcaption><b>Las vocales en el jardín · Español</b>45 seconds.</figcaption>
-        </figure>
-      </div>
-
-      <h3 class="reel-title">Vertical reels</h3>
-      <p class="reel-sub">Character introductions cut for Reels, Shorts and TikTok. The series has eight of them, one per character, plus matching widescreen versions.</p>
-      <div class="vgrid four">
-        <figure class="clip tall">
-          <video controls preload="none" playsinline poster="/media/short-tico.jpg"><source src="/media/short-tico.mp4" type="video/mp4"></video>
-          <figcaption><b>Tico</b>Character introduction</figcaption>
-        </figure>
-        <figure class="clip tall">
-          <video controls preload="none" playsinline poster="/media/short-lilian.jpg"><source src="/media/short-lilian.mp4" type="video/mp4"></video>
-          <figcaption><b>Lilian</b>Character introduction</figcaption>
-        </figure>
-        <figure class="clip tall">
-          <video controls preload="none" playsinline poster="/media/short-luna.jpg"><source src="/media/short-luna.mp4" type="video/mp4"></video>
-          <figcaption><b>Luna</b>Character introduction</figcaption>
-        </figure>
-        <figure class="clip tall">
-          <video controls preload="none" playsinline poster="/media/short-mateo.jpg"><source src="/media/short-mateo.mp4" type="video/mp4"></video>
-          <figcaption><b>Mateo</b>Character introduction</figcaption>
-        </figure>
-      </div>
-      <p class="disclose">How it was made: the characters and scenes are animated with AI video and image tools. Taylor wrote, cast, directed and edited each piece, working with Claude, an AI assistant, on scripts, translation and production. These are animations, not recordings of real people.</p>
-
-      <h3 class="reel-title" style="margin-top:clamp(40px,6vw,64px)">Dino Explorers</h3>
-      <p class="reel-sub">A photoreal action series in the spirit of 1980s Saturday-morning cartoons: young heroes, armored dinosaurs and a villain in a crimson palace, with a synth-rock score.</p>
-      <div class="vgrid two">
-        <figure class="clip">
-          <video controls preload="none" playsinline poster="/media/dino-explorers-intro.jpg"><source src="/media/dino-explorers-intro.mp4" type="video/mp4"></video>
-          <figcaption><b>Episode 1 · Opening titles</b>1 minute 30 seconds. The heroes meet their dinosaurs and ride out together.</figcaption>
-        </figure>
-        <figure class="clip">
-          <video controls preload="none" playsinline poster="/media/dino-explorers-crimson-palace.jpg"><source src="/media/dino-explorers-crimson-palace.mp4" type="video/mp4"></video>
-          <figcaption><b>Crimson Palace Showdown</b>30 seconds. The heroes storm the villain's palace, ending on a cliffhanger.</figcaption>
-        </figure>
-      </div>
-      <p class="disclose">Dino Explorers is generated with AI video tools from Taylor's storyboards, written and directed with Claude, an AI assistant.</p>
+    <div class="head">
+      <div><p class="chapter">02 · Video</p><h2 id="v-h">The screening room</h2></div>
+      <p>Original characters, scripts, voices and edits. Every release ships in widescreen and phone formats.</p>
     </div>
+
+    <div class="feature rv">
+      <div class="player"><video controls preload="none" playsinline poster="/media/ep002-one-avocado.jpg"><source src="/media/ep002-one-avocado.mp4" type="video/mp4"></video></div>
+      <div class="feature-copy">
+        <span class="tag">Featured · Public on YouTube</span>
+        <h3>Sonrisa Villa, Episode 2: <i>One Avocado</i></h3>
+        <p>A picnic mystery for toddlers and preschoolers that teaches the letter A and the number one, in English and Spanish.</p>
+        <dl><dt>Runtime</dt><dd>7 minutes 45 seconds</dd><dt>Languages</dt><dd>English and Spanish</dd><dt>Series</dt><dd>Sonrisa Villa</dd></dl>
+        <div class="actions"><a class="btn btn-quiet" href="https://www.youtube.com/watch?v=6MvheDdzLV4">Watch on YouTube<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h7v7M13 3 4 12"/></svg></a></div>
+      </div>
+    </div>
+
+    <div class="sub"><h3>More episodes</h3><p>Full stories with bilingual dialogue and on-screen captions in both languages.</p></div>
+    <div class="grid g2">
+      <figure class="vcard rv"><div class="player"><video controls preload="none" playsinline poster="/media/ep001-wheres-the-ball.jpg"><source src="/media/ep001-wheres-the-ball.mp4" type="video/mp4"></video></div><figcaption><b>Episode 1 · Where's the Ball?</b><span>10 minutes. Ball and <i>pelota</i>, where and <i>dónde</i>, together and <i>juntos</i>.</span></figcaption></figure>
+      <figure class="vcard rv"><div class="player"><video controls preload="none" playsinline poster="/media/ep003-two-wheels.jpg"><source src="/media/ep003-two-wheels.mp4" type="video/mp4"></video></div><figcaption><b>Episode 3 · Two Wheels</b><span>6 minutes 45 seconds. Mateo learns to ride his new bicycle: the letter B and the number two.</span></figcaption></figure>
+    </div>
+
+    <div class="sub"><h3>One lesson, two languages</h3><p>The same animation produced twice, with English and with Spanish vocals.</p></div>
+    <div class="grid g2">
+      <figure class="vcard rv"><div class="player"><video controls preload="none" playsinline poster="/media/vowels-garden-en.jpg"><source src="/media/vowels-garden-en.mp4" type="video/mp4"></video></div><figcaption><b>Vowels in the Garden · English</b><span>45 seconds.</span></figcaption></figure>
+      <figure class="vcard rv" lang="es"><div class="player"><video controls preload="none" playsinline poster="/media/vowels-garden-es.jpg"><source src="/media/vowels-garden-es.mp4" type="video/mp4"></video></div><figcaption><b>Las vocales en el jardín · Español</b><span>45 segundos.</span></figcaption></figure>
+    </div>
+
+    <div class="sub"><h3>Vertical reels</h3><p>Eight character introductions cut for Reels, Shorts and TikTok. Four are shown here.</p></div>
+    <div class="rail">
+      <figure class="vcard rv"><div class="player tall"><video controls preload="none" playsinline poster="/media/short-tico.jpg"><source src="/media/short-tico.mp4" type="video/mp4"></video></div><figcaption><b>Tico</b><span>Character introduction</span></figcaption></figure>
+      <figure class="vcard rv"><div class="player tall"><video controls preload="none" playsinline poster="/media/short-lilian.jpg"><source src="/media/short-lilian.mp4" type="video/mp4"></video></div><figcaption><b>Lilian</b><span>Character introduction</span></figcaption></figure>
+      <figure class="vcard rv"><div class="player tall"><video controls preload="none" playsinline poster="/media/short-luna.jpg"><source src="/media/short-luna.mp4" type="video/mp4"></video></div><figcaption><b>Luna</b><span>Character introduction</span></figcaption></figure>
+      <figure class="vcard rv"><div class="player tall"><video controls preload="none" playsinline poster="/media/short-mateo.jpg"><source src="/media/short-mateo.mp4" type="video/mp4"></video></div><figcaption><b>Mateo</b><span>Character introduction</span></figcaption></figure>
+    </div>
+
+    <div class="sub"><h3>Dino Explorers</h3><p>A photoreal action series in the spirit of 1980s Saturday-morning cartoons, with a synth-rock score.</p></div>
+    <div class="grid g2">
+      <figure class="vcard rv"><div class="player"><video controls preload="none" playsinline poster="/media/dino-explorers-intro.jpg"><source src="/media/dino-explorers-intro.mp4" type="video/mp4"></video></div><figcaption><b>Episode 1 · Opening titles</b><span>1 minute 30 seconds. The heroes meet their dinosaurs and ride out together.</span></figcaption></figure>
+      <figure class="vcard rv"><div class="player"><video controls preload="none" playsinline poster="/media/dino-explorers-crimson-palace.jpg"><source src="/media/dino-explorers-crimson-palace.mp4" type="video/mp4"></video></div><figcaption><b>Crimson Palace Showdown</b><span>30 seconds. The heroes storm the villain's palace, ending on a cliffhanger.</span></figcaption></figure>
+    </div>
+
+    <p class="disclose">How these were made: the characters and scenes are generated with AI video and image tools from Taylor's scripts and storyboards. Taylor wrote, directed and edited each piece, working with Claude, an AI assistant, on scripts, translation and production.</p>
   </div>
 </section>
 
 <section class="sec" id="marketing" aria-labelledby="m-h">
   <div class="wrap">
-    <header class="sec-head">
-      <p class="num">03 · Automatic marketing</p>
-      <div>
-        <h2 id="m-h">Marketing that keeps running</h2>
-        <p>What the automated marketing has produced so far. Figures were checked on 13 November 2026.</p>
+    <div class="head">
+      <div><p class="chapter">03 · Automatic marketing</p><h2 id="m-h">Marketing that keeps running</h2></div>
+      <p>What the automated marketing has produced. Figures checked on 13 November 2026.</p>
+    </div>
+    <div class="split">
+      <div class="rv">
+        <h3>MortalArthur, a store that stocks itself</h3>
+        <p>A print-on-demand store on its own domain. Every item is printed and shipped when it's ordered, so there's no inventory to manage.</p>
+        <ul class="ticks">
+          <li>687 products across 24 collections</li>
+          <li>Greeting cards, stickers, art prints, ornaments, mugs and playing cards</li>
+          <li>Catalog connected to Pinterest, so each new product becomes a shoppable pin</li>
+        </ul>
+        <div class="actions"><a class="btn btn-primary" href="https://mortalarthur.famemaker.app/">Visit the store<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h7v7M13 3 4 12"/></svg></a></div>
       </div>
-    </header>
-    <div class="body">
-      <div class="stats">
-        <div><p class="figure">687<small>products live in the store</small></p></div>
-        <div><p class="figure">24<small>store collections</small></p></div>
-        <div><p class="figure">811<small>finished print designs</small></p></div>
-        <div><p class="figure">35<small>finished social reels</small></p></div>
-      </div>
-      <ul class="rows">
-        <li class="row"><p class="k">Online store</p><div>
-          <h3>MortalArthur</h3>
-          <p>A print-on-demand store on its own domain selling greeting cards, stickers, art prints, ornaments, mugs and playing cards. Each item is printed and shipped when it is ordered, so there is no inventory.</p>
-          <p class="url"><a href="https://mortalarthur.famemaker.app/">mortalarthur.famemaker.app</a></p>
-        </div></li>
-        <li class="row"><p class="k">Pinterest</p><div>
-          <h3>A connected shopping catalog</h3>
-          <p>The store's catalog feeds Pinterest directly, with automatic product pins switched on, so each new product becomes a shoppable pin.</p>
-          <p class="url"><a href="https://www.pinterest.com/mortalarthur/">pinterest.com/mortalarthur</a></p>
-        </div></li>
-        <li class="row"><p class="k">Social reels</p><div>
-          <h3>Sonrisa Villa on Facebook and TikTok</h3>
-          <p>35 reels cut from the first two episodes. Thirteen are scheduled on the Facebook Page and thirteen on TikTok, releasing from 14 November.</p>
-        </div></li>
-        <li class="row"><p class="k">Offer pages</p><div>
-          <h3>Thirty service pages, published automatically</h3>
-          <p>Each service is written up with a price, deliverables and an FAQ, and published to this site without hand-editing.</p>
-          <p class="url"><a href="/offers/">taylor.famemaker.app/offers</a></p>
-        </div></li>
-      </ul>
+      <div class="browser rv"><div class="bar"><i></i><i></i><i></i><span>mortalarthur.famemaker.app</span></div><img src="/media/sites/mortalarthur.webp" alt="The MortalArthur store home page, showing vintage Christmas cards" width="1200" height="750" loading="lazy"></div>
+    </div>
+    <div class="grid g3">
+      <article class="card rv"><p class="k">Social video</p><p class="num">35</p><h3>Reels cut from two episodes</h3><p>Thirteen scheduled on the Sonrisa Villa Facebook Page and thirteen on TikTok, releasing from 14 November.</p></article>
+      <article class="card rv"><p class="k">Pinterest</p><p class="num">24</p><h3>Collections feeding a shopping catalog</h3><p>Automatic product pins are switched on, so the catalog grows on Pinterest as the store grows.</p><a class="link-arrow ext foot-link" href="https://www.pinterest.com/mortalarthur/">pinterest.com/mortalarthur</a></article>
+      <article class="card rv"><p class="k">Service pages</p><p class="num">30</p><h3>Offer pages published automatically</h3><p>Each service is written up with a price, deliverables and an FAQ, and published to this site without hand-editing.</p><a class="link-arrow foot-link" href="/offers/">See the offers</a></article>
     </div>
   </div>
 </section>
 
-<section class="sec" id="outreach" aria-labelledby="o-h">
+<section class="sec alt" id="outreach" aria-labelledby="o-h">
   <div class="wrap">
-    <header class="sec-head">
-      <p class="num">04 · Outreach</p>
-      <div>
-        <h2 id="o-h">Marketing capability and outreach</h2>
-        <p>Where the work is in front of people now.</p>
-      </div>
-    </header>
-    <div class="body">
-      <ul class="rows">
-        <li class="row"><p class="k">Press and partners</p><div>
-          <h3>Twenty personal pitches in one day</h3>
-          <p>On 13 November, 19 individually written emails and one contact-form message went to press, educators and partners about Sonrisa Villa.</p>
-        </div></li>
-        <li class="row"><p class="k">YouTube</p><div>
-          <h3>A bilingual channel with six videos</h3>
-          <p>Episode 2, <i>¡Un aguacate!</i>, is public, alongside character introductions and short lessons.</p>
-          <p class="url"><a href="https://www.youtube.com/@SonrisaVilla">youtube.com/@SonrisaVilla</a> · <a href="https://www.youtube.com/watch?v=6MvheDdzLV4">watch One Avocado</a></p>
-        </div></li>
-        <li class="row"><p class="k">Search</p><div>
-          <h3>A site built to be found in two languages</h3>
-          <p>Matching English and Spanish watch pages, a printable "Letter A hunt" activity for parents, and a 48-page sitemap.</p>
-          <p class="url"><a href="https://sonrisavilla.com/">sonrisavilla.com</a></p>
-        </div></li>
-        <li class="row"><p class="k">Weddings</p><div>
-          <h3>A reputation couples recommend</h3>
-          <p>Appalachian Wedding Company holds a 4.9 of 5 rating on WeddingWire. 98% of reviewers there say they would recommend it. One wrote: “Rev Taylor Caldwell was excellent!”</p>
-          <p class="url"><a href="https://www.weddingwire.com/biz/appalachian-wedding-company/3ad5813a0ced86c1.html">WeddingWire reviews</a> · <a href="https://appalachianweddingcompany.com/">appalachianweddingcompany.com</a></p>
-        </div></li>
-      </ul>
+    <div class="head">
+      <div><p class="chapter">04 · Outreach</p><h2 id="o-h">In front of the right people</h2></div>
+      <p>Where the work is reaching an audience today.</p>
+    </div>
+    <div class="grid g2">
+      <article class="card rv"><p class="k">Press and partners <i>13 Nov 2026</i></p><p class="num">20</p><h3>Personal pitches in one day</h3><p>Nineteen individually written emails and one contact-form message went to press, educators and partners about Sonrisa Villa.</p></article>
+      <article class="card rv"><p class="k">YouTube</p><p class="num">6</p><h3>Videos on a bilingual channel</h3><p>Episode 2 is public alongside character introductions and short lessons.</p><a class="link-arrow ext foot-link" href="https://www.youtube.com/@SonrisaVilla">youtube.com/@SonrisaVilla</a></article>
+      <article class="card rv"><p class="k">Search</p><p class="num">48</p><h3>Pages built to be found in two languages</h3><p>Matching English and Spanish watch pages and a printable "Letter A hunt" activity for parents.</p><a class="link-arrow ext foot-link" href="https://sonrisavilla.com/">sonrisavilla.com</a></article>
+      <article class="card rv"><p class="k">Weddings</p><p class="num">4.9</p><h3>A reputation couples recommend</h3><p>98% of WeddingWire reviewers recommend Appalachian Wedding Company. One wrote: “Rev Taylor Caldwell was excellent!”</p><a class="link-arrow ext foot-link" href="https://www.weddingwire.com/biz/appalachian-wedding-company/3ad5813a0ced86c1.html">Read the reviews</a></article>
     </div>
   </div>
 </section>
 
 <section class="sec" id="web" aria-labelledby="w-h">
   <div class="wrap">
-    <header class="sec-head">
-      <p class="num">05 · Web building</p>
-      <div>
-        <h2 id="w-h">Sites, stores and apps</h2>
-        <p>Public sites can be visited today. Private tools are described by what they do.</p>
-      </div>
-    </header>
-    <div class="body">
-      <ul class="rows">
-        <li class="row"><p class="k">Public · Bilingual</p><div>
-          <h3>Sonrisa Villa</h3>
-          <p>The series' home in English and Spanish, with a matching page for every episode, a printable activity, and an email sign-up for parents.</p>
-          <p class="url"><a href="https://sonrisavilla.com/">sonrisavilla.com</a></p>
-        </div></li>
-        <li class="row"><p class="k">Public · Store</p><div>
-          <h3>MortalArthur</h3>
-          <p>A 687-product store on a custom domain, organized into 24 collections and connected to Pinterest shopping.</p>
-          <p class="url"><a href="https://mortalarthur.famemaker.app/">mortalarthur.famemaker.app</a></p>
-        </div></li>
-        <li class="row"><p class="k">Public · Portfolio</p><div>
-          <h3>This site, its shop and its offers</h3>
-          <p>A fast static site with no build step, a 58-design gallery, thirty service pages and offline support. It reads well from a phone to a wide monitor.</p>
-          <p class="url"><a href="/shop/">The Shop</a> · <a href="/offers/">Offers</a></p>
-        </div></li>
-        <li class="row"><p class="k">Public · App site</p><div>
-          <h3>FameMaker</h3>
-          <p>The website and production server for FameMaker, an iPhone app. The app's App Store release is still pending.</p>
-          <p class="url"><a href="https://famemaker.app/">famemaker.app</a></p>
-        </div></li>
-        <li class="row"><p class="k">Private · Mac app</p><div>
-          <h3>Social Studio</h3>
-          <p>A small business's own posting service. It turns a folder of photos and videos into platform-sized ads with captions, waits for approval, and publishes to Facebook, Instagram, X and TikTok on a schedule.</p>
-        </div></li>
-        <li class="row"><p class="k">Private · Desktop</p><div>
-          <h3>A business control center</h3>
-          <p>A Mac desktop app that shows products, content, marketing channels and next actions for a small business on one dashboard.</p>
-        </div></li>
-      </ul>
+    <div class="head">
+      <div><p class="chapter">05 · Web building</p><h2 id="w-h">Sites, stores and apps</h2></div>
+      <p>Four public sites you can visit today, and two private tools described by what they do.</p>
+    </div>
+    <div class="grid g2" style="row-gap:clamp(36px,5vw,56px)">
+      <article class="site rv">
+        <a href="https://sonrisavilla.com/" class="browser" aria-label="Visit sonrisavilla.com"><div class="bar"><i></i><i></i><i></i><span>sonrisavilla.com</span></div><img src="/media/sites/sonrisavilla.webp" alt="Sonrisa Villa home page: Two languages, one wonderful world" width="1200" height="750" loading="lazy"></a>
+        <div><p class="k">Public · Bilingual</p><h3>Sonrisa Villa</h3><p>The series' home in English and Spanish, with a page for every episode, a printable activity and an email sign-up for parents.</p><a class="link-arrow ext" href="https://sonrisavilla.com/">Visit the site</a></div>
+      </article>
+      <article class="site rv">
+        <a href="https://mortalarthur.famemaker.app/" class="browser" aria-label="Visit the MortalArthur store"><div class="bar"><i></i><i></i><i></i><span>mortalarthur.famemaker.app</span></div><img src="/media/sites/mortalarthur.webp" alt="MortalArthur store home page" width="1200" height="750" loading="lazy"></a>
+        <div><p class="k">Public · Store</p><h3>MortalArthur</h3><p>A 687-product store on a custom domain, organized into 24 collections and connected to Pinterest shopping.</p><a class="link-arrow ext" href="https://mortalarthur.famemaker.app/">Visit the store</a></div>
+      </article>
+      <article class="site rv">
+        <a href="https://famemaker.app/" class="browser" aria-label="Visit famemaker.app"><div class="bar"><i></i><i></i><i></i><span>famemaker.app</span></div><img src="/media/sites/famemaker.webp" alt="FameMaker home page: Your name. Everywhere." width="1200" height="750" loading="lazy"></a>
+        <div><p class="k">Public · App site</p><h3>FameMaker</h3><p>The website and production server for FameMaker, an iPhone app. The app's App Store release is still pending.</p><a class="link-arrow ext" href="https://famemaker.app/">Visit the site</a></div>
+      </article>
+      <article class="site rv">
+        <a href="/shop/" class="browser" aria-label="Visit the Shop"><div class="bar"><i></i><i></i><i></i><span>taylor.famemaker.app/shop</span></div><img src="/media/sites/shop.webp" alt="The Shop home page with a vintage Christmas card" width="1200" height="750" loading="lazy"></a>
+        <div><p class="k">Public · Gallery</p><h3>The Shop</h3><p>A 58-design gallery for cards, stickers and prints, part of this site with thirty service pages and offline support.</p><a class="link-arrow" href="/shop/">Open the Shop</a></div>
+      </article>
+    </div>
+    <div class="sub"><h3>Private tools</h3><p>Built for the businesses that use them, so they aren't public.</p></div>
+    <div class="grid g2">
+      <article class="card rv"><p class="k">Mac app</p><h3>Social Studio</h3><p>A small business's own posting service. It turns a folder of photos and videos into platform-sized ads with captions, waits for approval, and publishes to Facebook, Instagram, X and TikTok on a schedule.</p></article>
+      <article class="card rv"><p class="k">Desktop app</p><h3>A business control center</h3><p>A Mac desktop app that puts products, content, marketing channels and next actions for a small business on one dashboard.</p></article>
     </div>
   </div>
 </section>
 
-<section class="sec" id="scripts" aria-labelledby="s-h">
+<section class="sec alt" id="scripts" aria-labelledby="s-h">
   <div class="wrap">
-    <header class="sec-head">
-      <p class="num">06 · Scripts</p>
-      <div>
-        <h2 id="s-h">Google Sheets and everyday automation</h2>
-        <p>Scripts that turn repetitive office work into one click.</p>
+    <div class="head">
+      <div><p class="chapter">06 · Scripts</p><h2 id="s-h">Google Sheets and everyday automation</h2></div>
+      <p>Scripts that turn repetitive office work into a single click.</p>
+    </div>
+    <div class="split">
+      <div class="rv">
+        <h3>A booking tracker that watches the balances</h3>
+        <p>This Apps Script adds a <b>Bookings</b> menu to a Google Sheet. One click:</p>
+        <ul class="ticks">
+          <li>works out the balance due on every booking</li>
+          <li>shades every overdue row</li>
+          <li>writes a month-by-month summary tab</li>
+        </ul>
+        <p style="font-size:14px;color:var(--ink-3)">A working sample written for this portfolio.</p>
       </div>
-    </header>
-    <div class="body">
-      <ul class="rows">
-        <li class="row"><p class="k">Google Sheets</p><div>
-          <h3>A booking tracker that watches the balances</h3>
-          <p>This Apps Script adds a menu to a bookings sheet. One click works out every balance due, shades overdue rows and writes a monthly summary tab. It is a working sample written for this portfolio.</p>
-        </div>
-<pre class="code"><code>// Bookings sheet, columns A to E: Event date | Client | Package | Total | Paid
-// The script writes the balance due into column F.
-function onOpen() {
-  SpreadsheetApp.getUi().createMenu('Bookings')
-    .addItem('Update balances and summary', 'updateBookings')
+      <div class="code-win rv"><div class="bar"><i></i><i></i><i></i><span>Bookings.gs</span></div>
+<pre><code><span class="c">// Bookings sheet, columns A to E: Event date | Client | Package | Total | Paid
+// The script writes the balance due into column F.</span>
+<span class="kw">function</span> <span class="f">onOpen</span>() {
+  SpreadsheetApp.getUi().createMenu(<span class="s">'Bookings'</span>)
+    .addItem(<span class="s">'Update balances and summary'</span>, <span class="s">'updateBookings'</span>)
     .addToUi();
 }
 
-function updateBookings() {
-  const ss = SpreadsheetApp.getActive();
-  const sheet = ss.getSheetByName('Bookings');
-  const rows = sheet.getDataRange().getValues().slice(1);
-  const today = new Date();
-  const months = {};
+<span class="kw">function</span> <span class="f">updateBookings</span>() {
+  <span class="kw">const</span> ss = SpreadsheetApp.getActive();
+  <span class="kw">const</span> sheet = ss.getSheetByName(<span class="s">'Bookings'</span>);
+  <span class="kw">const</span> rows = sheet.getDataRange().getValues().slice(1);
+  <span class="kw">const</span> today = <span class="kw">new</span> Date();
+  <span class="kw">const</span> months = {};
 
   rows.forEach((r, i) =&gt; {
-    const [date, client, pkg, total, paid] = r;
-    if (!client || !(date instanceof Date)) return;
-    const due = Number(total) - Number(paid);
-    const row = i + 2;
+    <span class="kw">const</span> [date, client, pkg, total, paid] = r;
+    <span class="kw">if</span> (!client || !(date <span class="kw">instanceof</span> Date)) <span class="kw">return</span>;
+    <span class="kw">const</span> due = Number(total) - Number(paid);
+    <span class="kw">const</span> row = i + 2;
     sheet.getRange(row, 6).setValue(due);
-    const late = due &gt; 0 &amp;&amp; date &lt; today;
-    sheet.getRange(row, 1, 1, 6).setBackground(late ? '#f6d5d0' : null);
-    const key = Utilities.formatDate(date, ss.getSpreadsheetTimeZone(), 'yyyy-MM');
+    <span class="kw">const</span> late = due &gt; 0 &amp;&amp; date &lt; today;
+    sheet.getRange(row, 1, 1, 6).setBackground(late ? <span class="s">'#f6d5d0'</span> : <span class="kw">null</span>);
+    <span class="kw">const</span> key = Utilities.formatDate(date, ss.getSpreadsheetTimeZone(), <span class="s">'yyyy-MM'</span>);
     months[key] = months[key] || [0, 0, 0];
-    months[key][0] += 1; months[key][1] += Number(total); months[key][2] += due;
+    months[key][0] += 1;
+    months[key][1] += Number(total);
+    months[key][2] += due;
   });
 
-  const out = ss.getSheetByName('Summary') || ss.insertSheet('Summary');
+  <span class="kw">const</span> out = ss.getSheetByName(<span class="s">'Summary'</span>) || ss.insertSheet(<span class="s">'Summary'</span>);
   out.clearContents();
-  const table = [['Month', 'Bookings', 'Booked', 'Still due']];
+  <span class="kw">const</span> table = [[<span class="s">'Month'</span>, <span class="s">'Bookings'</span>, <span class="s">'Booked'</span>, <span class="s">'Still due'</span>]];
   Object.keys(months).sort().forEach(m =&gt; table.push([m, ...months[m]]));
   out.getRange(1, 1, table.length, 4).setValues(table);
 }</code></pre>
-        </li>
-        <li class="row"><p class="k">Store listings</p><div>
-          <h3>From finished design to listed product</h3>
-          <p>A set of 58 scripts turns finished artwork into priced, described store listings and Pinterest pin files for the store.</p>
-        </div></li>
-        <li class="row"><p class="k">Video</p><div>
-          <h3>Episodes assembled in every format</h3>
-          <p>About forty video tools cut each episode into widescreen, phone and vertical versions, add bilingual captions and produce the reels.</p>
-        </div></li>
-        <li class="row"><p class="k">Bookkeeping</p><div>
-          <h3>Reports a CPA can use</h3>
-          <p>A private reporting tool mirrors a small business's books and produces profit-and-loss reports, a 13-week cash forecast and a year-end package for the accountant.</p>
-        </div></li>
-      </ul>
+      </div>
+    </div>
+    <div class="grid g3">
+      <article class="card rv"><p class="k">Store listings</p><h3>From finished design to listed product</h3><p>58 scripts turn finished artwork into priced, described store listings and Pinterest pin files.</p></article>
+      <article class="card rv"><p class="k">Video</p><h3>Episodes in every format</h3><p>About forty video tools cut each episode into widescreen, phone and vertical versions, add bilingual captions and produce the reels.</p></article>
+      <article class="card rv"><p class="k">Bookkeeping</p><h3>Reports a CPA can use</h3><p>A private tool mirrors a small business's books and produces profit-and-loss reports, a 13-week cash forecast and a year-end package.</p></article>
     </div>
   </div>
 </section>
 
 <section class="sec" id="experience" aria-labelledby="e-h">
   <div class="wrap">
-    <header class="sec-head">
-      <p class="num">07 · Experience</p>
-      <div><h2 id="e-h">Work history</h2></div>
-    </header>
-    <div class="body">
-      <div class="job"><p class="when">2026 – present</p><div>
-        <h3>Producer and builder</h3><p class="org">Sonrisa Villa · MortalArthur · FameMaker</p>
-        <p>Created and produces an animated bilingual series for young children. Built and runs a print-on-demand store and its marketing, and builds the websites and tools behind each project.</p>
-      </div></div>
-      <div class="job"><p class="when">2022 – present</p><div>
-        <h3>Owner and operator</h3><p class="org">Appalachian Wedding Company LLC, Gatlinburg</p>
-        <p>Plans and runs weddings from first call to the day itself. Handles client records, phone sales, contract negotiation, dispute resolution and the finances. Manages equipment and locations, and sets strategy with a business partner.</p>
-      </div></div>
-      <div class="job"><p class="when">2015 – 2022</p><div>
-        <h3>Minister of Education</h3><p class="org">First Baptist Church Gatlinburg</p>
-        <p>Oversaw administration for children's and senior adult ministries. Ordered literature and managed classrooms, attendance, membership data and tracking. Planned events of every size, led a small group, and spoke publicly every week.</p>
-      </div></div>
-      <div class="job"><p class="when">2014 – 2015</p><div>
-        <h3>Assistant Manager</h3><p class="org">Beef O'Brady's, Kingsport</p>
-        <p>Supervised shifts and resolved customer issues. Handled cash, received shipments and paid vendors.</p>
-      </div></div>
-      <div class="job"><p class="when">2013 – 2014</p><div>
-        <h3>Family Service Counselor</h3><p class="org">Waco Memorial Funeral Home and Cemeteries</p>
-        <p>Guided grieving families through burial arrangements and paperwork, sold pre-need plans, and served as a stand-in minister for committal services.</p>
-      </div></div>
-      <div class="job"><p class="when">2010 – 2013</p><div>
-        <h3>Minister of Youth</h3><p class="org">Oak Lawn Baptist Church and Daycare, Waco</p>
-        <p>Taught weekly lessons, preached, planned trips for middle and high school students, and built ties with local schools.</p>
-      </div></div>
-      <div class="job"><p class="when">2009 – 2011</p><div>
-        <h3>Shelter Monitor</h3><p class="org">Mission Waco</p>
-        <p>Checked guests in for overnight stays, kept the shelter safe overnight, and drove participants to and from work.</p>
-      </div></div>
-      <div class="job"><p class="when">2006 – 2010</p><div>
-        <h3>Ministry internships and camp counselor</h3><p class="org">First Baptist Church Kingsport · Columbus Avenue Baptist Church, Waco</p>
-        <p>Summer roles leading Bible studies, children's worship, day camps, field trips and mission trips.</p>
-      </div></div>
+    <div class="head">
+      <div><p class="chapter">07 · Experience</p><h2 id="e-h">Work history</h2></div>
+      <p>Most recent first.</p>
+    </div>
+    <ol class="timeline" reversed>
+      <li class="now rv"><p class="when">2026 – present</p><div><h3>Producer and builder</h3><p class="org">Sonrisa Villa · Dino Explorers · MortalArthur · FameMaker</p><p>Created and produces two original video series. Built and runs a print-on-demand store and its marketing, and builds the websites and tools behind each project.</p></div></li>
+      <li class="now rv"><p class="when">2022 – present</p><div><h3>Owner and operator</h3><p class="org">Appalachian Wedding Company LLC, Gatlinburg</p><p>Plans and runs weddings from first call to the day itself. Handles client records, phone sales, contract negotiation, dispute resolution and the finances. Manages equipment and locations, and sets strategy with a business partner.</p></div></li>
+      <li class="rv"><p class="when">2015 – 2022</p><div><h3>Minister of Education</h3><p class="org">First Baptist Church Gatlinburg</p><p>Oversaw administration for children's and senior adult ministries. Ordered literature and managed classrooms, attendance, membership data and tracking. Planned events of every size, led a small group and spoke publicly every week.</p></div></li>
+      <li class="rv"><p class="when">2014 – 2015</p><div><h3>Assistant Manager</h3><p class="org">Beef O'Brady's, Kingsport</p><p>Supervised shifts and resolved customer issues. Handled cash, received shipments and paid vendors.</p></div></li>
+      <li class="rv"><p class="when">2013 – 2014</p><div><h3>Family Service Counselor</h3><p class="org">Waco Memorial Funeral Home and Cemeteries</p><p>Guided grieving families through burial arrangements and paperwork, sold pre-need plans, and served as a stand-in minister for committal services.</p></div></li>
+      <li class="rv"><p class="when">2010 – 2013</p><div><h3>Minister of Youth</h3><p class="org">Oak Lawn Baptist Church and Daycare, Waco</p><p>Taught weekly lessons, preached, planned trips for middle and high school students, and built ties with local schools.</p></div></li>
+      <li class="rv"><p class="when">2009 – 2011</p><div><h3>Shelter Monitor</h3><p class="org">Mission Waco</p><p>Checked guests in for overnight stays, kept the shelter safe overnight, and drove participants to and from work.</p></div></li>
+      <li class="rv"><p class="when">2006 – 2010</p><div><h3>Ministry internships and camp counselor</h3><p class="org">First Baptist Church Kingsport · Columbus Avenue Baptist Church, Waco</p><p>Summer roles leading Bible studies, children's worship, day camps, field trips and mission trips.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec alt" id="education" aria-labelledby="ed-h">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="chapter">08 · Education</p><h2 id="ed-h">Degrees</h2></div>
+    </div>
+    <div class="grid g3">
+      <article class="card rv"><p class="k">2009 – 2013</p><h3>Master of Divinity</h3><p>George W. Truett Theological Seminary, Baylor University, Waco, Texas. Concentration in theology and spiritual development.</p></article>
+      <article class="card rv"><p class="k">2006 – 2008</p><h3>Bachelor of Arts, Religion</h3><p>Carson-Newman University, Jefferson City, Tennessee.</p></article>
+      <article class="card rv"><p class="k">2004 – 2005</p><h3>Mass Communication studies</h3><p>East Tennessee State University, Johnson City, Tennessee.</p></article>
     </div>
   </div>
 </section>
 
-<section class="sec" id="education" aria-labelledby="ed-h">
+<section class="contact" id="contact" aria-labelledby="c-h">
   <div class="wrap">
-    <header class="sec-head">
-      <p class="num">08 · Education</p>
-      <div><h2 id="ed-h">Degrees</h2></div>
-    </header>
-    <div class="body">
-      <div class="job"><p class="when">2009 – 2013</p><div>
-        <h3>Master of Divinity</h3><p class="org">George W. Truett Theological Seminary, Baylor University, Waco, Texas</p>
-        <p>Concentration in theology and spiritual development.</p>
-      </div></div>
-      <div class="job"><p class="when">2006 – 2008</p><div>
-        <h3>Bachelor of Arts, Religion</h3><p class="org">Carson-Newman University, Jefferson City, Tennessee</p>
-      </div></div>
-      <div class="job"><p class="when">2004 – 2005</p><div>
-        <h3>Mass Communication studies</h3><p class="org">East Tennessee State University, Johnson City, Tennessee</p>
-      </div></div>
+    <p class="eyebrow" style="color:#ffd9c9">Contact</p>
+    <h2 id="c-h">Let's make something <em>real</em>.</h2>
+    <p>Hiring, collaborating or just curious about the work? Email is the quickest way to reach me.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:tarthwell@gmail.com">tarthwell@gmail.com</a>
+      <button class="btn btn-quiet" id="copyEmail" type="button">Copy email</button>
     </div>
   </div>
 </section>
@@ -411,29 +343,62 @@ function updateBookings() {
 
 <footer class="foot">
   <div class="wrap">
-    <div>
-      <h2>Get in touch</h2>
-      <p>Write to <a href="mailto:tarthwell@gmail.com">tarthwell@gmail.com</a>.</p>
-    </div>
-    <div class="links">
-      <a href="/offers/">Offers</a><a href="/shop/">The Shop</a><a href="https://sonrisavilla.com/">Sonrisa Villa</a><a href="/privacy/">Privacy</a>
-    </div>
-    <small>Much of this work is made with AI tools, including Claude, and every piece is checked by Taylor before it is published. Figures are as of 13 November 2026.</small>
+    <span>© 2026 Taylor Caldwell · Gatlinburg, Tennessee</span>
+    <nav aria-label="More"><a href="/offers/">Offers</a><a href="/shop/">The Shop</a><a href="https://sonrisavilla.com/">Sonrisa Villa</a><a href="/privacy/">Privacy</a></nav>
+    <small>Much of this work is made with AI tools, including Claude, and Taylor checks every piece before it's published. Figures are as of 13 November 2026.</small>
   </div>
 </footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (() => {
-  const links = [...document.querySelectorAll('#nav a')];
-  const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
-  const io = new IntersectionObserver(es => es.forEach(e => {
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Header turns solid once past the hero.
+  const mast = $('#mast'), hero = $('.hero');
+  const onScroll = () => {
+    const h = hero.offsetHeight;
+    mast.classList.toggle('solid', scrollY > h - 80);
+    if (!reduce) hero.style.setProperty('--p', Math.min(1, scrollY / h).toFixed(3));
+  };
+  addEventListener('scroll', onScroll, {passive: true}); onScroll();
+
+  // Mobile menu.
+  const nav = $('#nav'), mb = $('#menuBtn');
+  const setMenu = open => { nav.classList.toggle('open', open); mb.setAttribute('aria-expanded', open); if (open) mast.classList.add('solid'); else onScroll(); };
+  mb.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+  nav.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  // Showreel: silent loop; paused for reduced motion and when off screen.
+  const reel = $('#reel'), rt = $('#reelToggle');
+  let userPaused = reduce;
+  const sync = () => { rt.setAttribute('aria-pressed', userPaused); rt.querySelector('span').textContent = userPaused ? 'Play reel' : 'Pause reel'; };
+  if (reduce) rt.hidden = true;
+  rt.addEventListener('click', () => { userPaused = !userPaused; userPaused ? reel.pause() : reel.play().catch(() => {}); sync(); });
+  new IntersectionObserver(([e]) => { if (userPaused) return; e.isIntersecting ? reel.play().catch(() => {}) : reel.pause(); }).observe(hero);
+  sync();
+
+  // Reveal on scroll, never gating content.
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin: '0px 0px -8% 0px'});
+  $$('.rv').forEach(el => io.observe(el));
+
+  // Section highlighting in the nav.
+  const links = $$('#nav a[href^="#"]').filter(a => !a.classList.contains('btn'));
+  const spy = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
-    links.forEach(a => a.removeAttribute('aria-current'));
-    const a = map.get(e.target.id); if (a) { a.setAttribute('aria-current', 'true'); a.scrollIntoView({block: 'nearest', inline: 'nearest'}); }
+    links.forEach(a => a.toggleAttribute('aria-current', a.getAttribute('href') === '#' + e.target.id));
   }), {rootMargin: '-45% 0px -50% 0px'});
-  map.forEach((_, id) => { const s = document.getElementById(id); if (s) io.observe(s); });
-  // Only one video plays at a time.
-  document.addEventListener('play', e => document.querySelectorAll('video').forEach(v => { if (v !== e.target) v.pause(); }), true);
+  links.forEach(a => { const s = document.getElementById(a.getAttribute('href').slice(1)); if (s) spy.observe(s); });
+
+  // One video at a time.
+  document.addEventListener('play', e => $$('main video').forEach(v => { if (v !== e.target && v !== reel) v.pause(); }), true);
+
+  // Copy email.
+  const toast = msg => { const t = $('#toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('on'), 2200); };
+  $('#copyEmail').addEventListener('click', () => navigator.clipboard.writeText('tarthwell@gmail.com').then(() => toast('Email copied'), () => toast('tarthwell@gmail.com')));
+
   if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('/sw.js').catch(() => {});
 })();
 </script>
